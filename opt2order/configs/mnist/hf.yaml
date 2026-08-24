@@ -1,0 +1,20 @@
+name: mnist_hf
+dataset: mnist
+model: mnist_mlp
+optimizer: hf
+optimizer_kwargs:
+  damping: 0.01
+  cg_max_iter: 20
+  cg_tol: 1.0e-3
+  ls_max_iter: 10
+  ls_armijo: 1.0e-4
+# HF is expensive per step; we use larger batches and fewer epochs since
+# each outer iteration is more powerful.
+batch_size: 512
+epochs: 20
+target_accuracy: 0.98
+loss: cross_entropy
+device: cuda
+seed: 1
+output_dir: runs
+closure_supports_create_graph: true

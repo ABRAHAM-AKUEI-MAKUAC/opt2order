@@ -1,0 +1,19 @@
+name: mnist_lbfgs
+dataset: mnist
+model: mnist_mlp
+optimizer: lbfgs
+optimizer_kwargs:
+  history_size: 20
+  max_ls: 25
+  c1: 1.0e-4
+  c2: 0.9
+# L-BFGS works best with large mini-batches.  The thesis uses the full
+# training batch via a deterministic Wolfe line search.  We use 1024-image
+# batches as a practical compromise that still respects the secant cond.
+batch_size: 1024
+epochs: 15
+target_accuracy: 0.98
+loss: cross_entropy
+device: cuda
+seed: 1
+output_dir: runs

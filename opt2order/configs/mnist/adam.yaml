@@ -1,0 +1,13 @@
+name: mnist_adam
+dataset: mnist
+model: mnist_mlp
+optimizer: adam
+optimizer_kwargs:
+  lr: 0.001
+epochs: 30
+batch_size: 128
+target_accuracy: 0.98
+loss: cross_entropy
+device: cuda
+seed: 1
+output_dir: runs

@@ -1,0 +1,15 @@
+name: cifar_sgdm
+dataset: cifar10
+model: cifar_vgg
+optimizer: sgdm
+optimizer_kwargs:
+  lr: 0.1
+  momentum: 0.9
+  weight_decay: 5.0e-4
+epochs: 80
+batch_size: 128
+target_accuracy: 0.85
+loss: cross_entropy
+device: cuda
+seed: 1
+output_dir: runs

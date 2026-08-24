@@ -1,0 +1,17 @@
+name: cifar_hf
+dataset: cifar10
+model: cifar_vgg
+optimizer: hf
+optimizer_kwargs:
+  damping: 3.0e-3
+  cg_max_iter: 25
+  cg_tol: 1.0e-3
+  ls_max_iter: 10
+batch_size: 256
+epochs: 30
+target_accuracy: 0.85
+loss: cross_entropy
+device: cuda
+seed: 1
+output_dir: runs
+closure_supports_create_graph: true

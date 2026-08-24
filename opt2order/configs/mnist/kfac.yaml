@@ -1,0 +1,16 @@
+name: mnist_kfac
+dataset: mnist
+model: mnist_mlp
+optimizer: kfac
+optimizer_kwargs:
+  lr: 0.01
+  damping: 0.01
+  inv_freq: 10
+  decay: 0.95
+epochs: 15
+batch_size: 128
+target_accuracy: 0.98
+loss: cross_entropy
+device: cuda
+seed: 1
+output_dir: runs

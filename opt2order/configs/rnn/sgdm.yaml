@@ -1,0 +1,20 @@
+name: addition_sgdm
+dataset: addition
+model: addition_lstm
+optimizer: sgdm
+optimizer_kwargs:
+  lr: 0.01
+  momentum: 0.9
+data_kwargs:
+  seq_len: 50
+  train_size: 10000
+  val_size: 1000
+  test_size: 1000
+batch_size: 64
+epochs: 30
+target_loss: 0.05
+grad_clip: 1.0
+loss: mse
+device: cuda
+seed: 1
+output_dir: runs

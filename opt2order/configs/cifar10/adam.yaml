@@ -1,0 +1,13 @@
+name: cifar_adam
+dataset: cifar10
+model: cifar_vgg
+optimizer: adam
+optimizer_kwargs:
+  lr: 3.0e-4
+epochs: 80
+batch_size: 128
+target_accuracy: 0.85
+loss: cross_entropy
+device: cuda
+seed: 1
+output_dir: runs

@@ -1,0 +1,29 @@
+# Run artifacts
+runs/
+data/
+
+# Analysis output (regenerable)
+analysis/figures/
+analysis/tables/
+analysis/summary.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/

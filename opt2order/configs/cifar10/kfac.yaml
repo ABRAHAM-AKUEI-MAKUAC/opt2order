@@ -1,0 +1,17 @@
+name: cifar_kfac
+dataset: cifar10
+model: cifar_vgg
+optimizer: kfac
+optimizer_kwargs:
+  lr: 0.01
+  damping: 3.0e-3
+  inv_freq: 20
+  decay: 0.95
+  weight_decay: 5.0e-4
+epochs: 60
+batch_size: 128
+target_accuracy: 0.85
+loss: cross_entropy
+device: cuda
+seed: 1
+output_dir: runs

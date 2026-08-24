@@ -1,0 +1,22 @@
+name: cifar_lbfgs
+dataset: cifar10
+model: cifar_vgg
+optimizer: lbfgs
+optimizer_kwargs:
+  history_size: 10
+  max_ls: 25
+  c1: 1.0e-4
+  c2: 0.9
+# Augmentation is disabled because L-BFGS's secant condition is
+# incompatible with stochastic input augmentation (Section 4.4 of the
+# thesis); even so, the stochastic regime is hostile to L-BFGS and
+# the result is expected to trail SGDM and K-FAC.
+data_kwargs:
+  augment: false
+batch_size: 1024
+epochs: 30
+target_accuracy: 0.85
+loss: cross_entropy
+device: cuda
+seed: 1
+output_dir: runs

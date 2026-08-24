@@ -1,0 +1,23 @@
+name: addition_hf
+dataset: addition
+model: addition_lstm
+optimizer: hf
+optimizer_kwargs:
+  damping: 0.01
+  cg_max_iter: 50
+  cg_tol: 1.0e-3
+  ls_max_iter: 10
+data_kwargs:
+  seq_len: 50
+  train_size: 10000
+  val_size: 1000
+  test_size: 1000
+batch_size: 256
+epochs: 20
+target_loss: 0.05
+grad_clip: 5.0
+loss: mse
+device: cuda
+seed: 1
+output_dir: runs
+closure_supports_create_graph: true
